@@ -1,4 +1,5 @@
 function task1() {
+    console.log("Задание №1")
     let a = 5;  // number
     let name = "name";  // string
     let i = 0;  // number
@@ -11,16 +12,6 @@ function task1() {
 function task2() {
     console.log("Задание №2")
 
-    let length = 45;
-    let width = 21;
-    let rectangleSquare = length * width
-
-    console.log(`Площадь четырёхугольника: ${rectangleSquare}`)
-}
-
-function task3() {
-    console.log("Задание №3")
-
     const length = 45;
     const width = 21;
     const squareLen = 5
@@ -31,8 +22,8 @@ function task3() {
     console.log(`Количество квадратов, которое поместится в четырёхугольник: ${countSquares}`)
 }
 
-function task4() {
-    console.log("Задание №4")
+function task3() {
+    console.log("Задание №3")
 
     let i = 2
     let a = ++i
@@ -46,8 +37,8 @@ function task4() {
     console.log(`a не равно b: ${a} != ${b}`)
 }
 
-function task5() {
-    console.log("Задание №5")
+function task4() {
+    console.log("Задание №4")
 
     "Котик" == "котик" ? console.log(`Котик == котик`) : console.log(`Котик != котик`)
     "Котик" == "китик" ? console.log(`Котик == китик`) : console.log(`Котик != китик`)
@@ -64,8 +55,8 @@ function task5() {
     null == undefined ? console.log(`null == undefined`) : console.log(`null != undefined`)
 }
 
-function task6() {
-    alert("Задание №6")
+function task5() {
+    alert("Задание №5")
 
     const teacherFullName = "Иванов Иван Иванович"
     const inputFullName = prompt("Введите имя: ").toLowerCase()
@@ -78,8 +69,8 @@ function task6() {
     alert("Введённые данные неверны")
 }
 
-function task7() {
-    alert("Задание №7")
+function task6() {
+    alert("Задание №6")
 
     const passedRussian = prompt("Сдал ли студент русский? (true / false)") === "true"
     const passedMath = prompt("Сдал ли студент математику? (true / false)") === "true"
@@ -94,26 +85,8 @@ function task7() {
     }
 }
 
-function task8() {
-    alert("Задание №8")
-
-    const a = Number(prompt("Введите a: "))
-    const b = Number(prompt("Введите b: "))
-    const n = Number(prompt("Введите n: "))
-
-    alert(`Сумма: ${a + b}`)
-    alert(`Разность: ${a - b}`)
-    alert(`Деление: ${a / b}`)
-    alert(`Умножение: ${a * b}`)
-    alert(`Возведение в степень a: ${a ** n}`)
-    alert(`Возведение в степень b: ${b ** n}`)
-    alert(`Остаток от деления: ${a % b}`)
-    alert(`Корень a: ${Math.sqrt(a)}`)
-    alert(`Корень b: ${Math.sqrt(b)}`)
-}
-
-function task9() {
-    alert("Задание №9")
+function task7() {
+    alert("Задание №7")
     alert(`true + true = ${true + true}`)
     alert(`0 + "5" = ${0 + "5"}`)
     alert(`5 + "мм" = ${5 + "мм"}`)
@@ -126,8 +99,8 @@ function task9() {
     alert(`7 || 0 = ${7 || 0}`)
 }
 
-function task10() {
-    console.log("Задание №10")
+function task8() {
+    console.log("Задание №8")
 
     for(let i = 1; i <= 10; i++) {
         if (i % 2 === 0) {
@@ -139,8 +112,8 @@ function task10() {
     }
 }
 
-function task11() {
-    alert("Задание №11")
+function task9() {
+    alert("Задание №9")
 
     const numDay = Number(prompt("Введите номер дня недели: "))
 
@@ -174,6 +147,33 @@ function task11() {
     alert(`День: ${arrayDays[numDay - 1]}`)
 }
 
+function task10(param1, param2, param3 = 10) {
+    alert("Задание №10")
+    alert(`${param3}${param2}${param1}`)
+}
+
+function params(a, b) {
+    alert("Задание №11 (функция)")
+
+    if (a === b) {
+        alert(`Результат: ${a * 4}`)
+        return
+    }
+
+    alert(`Результат: ${a * b}`)
+}
+
+let lambda = (a, b) => {
+    alert("Задание №11 (стрелочная функция)")
+
+    if (a === b) {
+        alert(`Результат: ${a * 4}`)
+        return
+    }
+
+    alert(`Результат: ${a * b}`)
+}
+
 task1()
 task2()
 task3()
@@ -183,5 +183,7 @@ task6()
 task7()
 task8()
 task9()
-task10()
-task11()
+const userParam = prompt("Введите параметр: ")
+task10(userParam, "my str")
+params(2, 2)
+lambda(4, 5)

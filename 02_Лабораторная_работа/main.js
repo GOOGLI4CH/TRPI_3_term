@@ -3,11 +3,13 @@ function basicOperation(operation, leftNum, rightNum) {
         case "+":
             return Number(leftNum) + Number(rightNum)
         case "-":
-            return Number(leftNum) - Number(rightNum)
+            return leftNum - rightNum
         case "*":
-            return Number(leftNum) * Number(rightNum)
+            return leftNum * rightNum
         case "/":
-            return Number(leftNum) / Number(rightNum)
+            return leftNum / rightNum
+        default:
+            return 'Неверная операция'
     }
 }
 
@@ -27,9 +29,8 @@ function averageSum(list) {
     return sum / list.length
 }
 
-function convertStr(inputStr) {
-    const reversedStr = inputStr.split("").reverse().join("")
-    return reversedStr.replace(/[а-яА-ЯёЁ~!?`'";:./,]/g, '')
+function convertStr(str) {
+    return str.split('').reverse().filter(char => /[a-zA-Z]/.test(char)).join('');
 }
 
 function showStr(n, inputStr) {
@@ -48,7 +49,6 @@ function joinLists(firstArray, secondArray) {
     for (const firstArrayStr of firstArray) {
         for (const secondArrayStr of secondArray) {
             if (firstArrayStr === secondArrayStr) { continue }
-
             resultArray.push(firstArrayStr)
         }
     }

@@ -1,6 +1,2 @@
 # Ignore JetBrains WebStorm files
 .idea/
-
-# Ignore .docx and .pdf files
-*.docx
-*.pdf
